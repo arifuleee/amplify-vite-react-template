@@ -4,10 +4,12 @@ import '@aws-amplify/ui-react/styles.css';
 import { generateClient } from "aws-amplify/data";
 import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
+import TodoCreateForm from "../ui-components/TodoCreateForm";
 
 const client = generateClient<Schema>();
 
 function App() {
+  return <TodoCreateForm />;
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   useEffect(() => {
@@ -24,6 +26,7 @@ function App() {
   function deleteTodo(id: string) {
     client.models.Todo.delete({ id })
   }
+
 
   return (
         
