@@ -2,12 +2,12 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $condition: ModelTodoConditionInput
-    $input: CreateTodoInput!
+export const createPatient = /* GraphQL */ `
+  mutation CreatePatient(
+    $condition: ModelPatientConditionInput
+    $input: CreatePatientInput!
   ) {
-    createTodo(condition: $condition, input: $input) {
+    createPatient(condition: $condition, input: $input) {
       content
       createdAt
       id
@@ -16,12 +16,12 @@ export const createTodo = /* GraphQL */ `
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $condition: ModelTodoConditionInput
-    $input: DeleteTodoInput!
+export const deletePatient = /* GraphQL */ `
+  mutation DeletePatient(
+    $condition: ModelPatientConditionInput
+    $input: DeletePatientInput!
   ) {
-    deleteTodo(condition: $condition, input: $input) {
+    deletePatient(condition: $condition, input: $input) {
       content
       createdAt
       id
@@ -30,12 +30,12 @@ export const deleteTodo = /* GraphQL */ `
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $condition: ModelTodoConditionInput
-    $input: UpdateTodoInput!
+export const updatePatient = /* GraphQL */ `
+  mutation UpdatePatient(
+    $condition: ModelPatientConditionInput
+    $input: UpdatePatientInput!
   ) {
-    updateTodo(condition: $condition, input: $input) {
+    updatePatient(condition: $condition, input: $input) {
       content
       createdAt
       id

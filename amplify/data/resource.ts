@@ -1,15 +1,45 @@
+// import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
+
+// const schema = a.schema({
+//   Todo: a
+//     .model({
+//       content: a.string(),
+//     })
+//     .authorization((allow) => [allow.publicApiKey()]),
+// });
+
+// export type Schema = ClientSchema<typeof schema>;
+
+// export const data = defineData({
+//   schema,
+//   authorizationModes: {
+//     defaultAuthorizationMode: "apiKey",
+//     // API Key is used for a.allow.public() rules
+//     apiKeyAuthorizationMode: {
+//       expiresInDays: 30,
+//     },
+//   },
+// });
+
+
+
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 
-/*== STEP 1 ===============================================================
-The section below creates a Todo database table with a "content" field. Try
-adding a new "isDone" field as a boolean. The authorization rule below
-specifies that any user authenticated via an API key can "create", "read",
-"update", and "delete" any "Todo" records.
-=========================================================================*/
+
 const schema = a.schema({
-  Todo: a
+  Patient: a
     .model({
-      content: a.string(),
+      invoice_no: a.string(),
+      receive_date: a.date(),
+      reporting_date: a.date(),
+      patient_name: a.string(),
+      patient_age: a.integer(),
+      patient_sex: a.string(),
+      consultant: a.string(),
+      investigation: a.string(),
+      clinical_information: a.string(),
+      aspiration_note: a.string(),
+      conclusion: a.string(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });
@@ -50,8 +80,7 @@ Fetch records from the database and use them in your frontend component.
 (THIS SNIPPET WILL ONLY WORK IN THE FRONTEND CODE FILE.)
 =========================================================================*/
 
-/* For example, in a React component, you can use this snippet in your
-  function's RETURN statement */
-// const { data: todos } = await client.models.Todo.list()
+// Example usage in a React component to fetch and display patient records
+// const { data: patients } = await client.models.Patient.list()
 
-// return <ul>{todos.map(todo => <li key={todo.id}>{todo.content}</li>)}</ul>
+// return <ul>{patients.map(patient => <li key={patient.id}>{patient.patient_name}</li>)}</ul>

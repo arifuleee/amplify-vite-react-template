@@ -2,9 +2,9 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
+export const getPatient = /* GraphQL */ `
+  query GetPatient($id: ID!) {
+    getPatient(id: $id) {
       content
       createdAt
       id
@@ -13,13 +13,13 @@ export const getTodo = /* GraphQL */ `
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
+export const listPatients = /* GraphQL */ `
+  query ListPatients(
+    $filter: ModelPatientFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPatients(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         content
         createdAt
